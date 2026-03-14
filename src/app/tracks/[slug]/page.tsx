@@ -103,8 +103,8 @@ export default async function TrackDetailPage({
             Modules coming soon
           </h2>
           <p className="text-sm text-text-secondary max-w-md mx-auto">
-            We are building the detailed curriculum for this track. Each module
-            will include concepts, prerequisites, and recommended resources.
+            The detailed curriculum for this track is being constructed. Each
+            module will include concepts, prerequisites, and recommended resources.
           </p>
         </div>
       )}

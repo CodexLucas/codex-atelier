@@ -18,9 +18,9 @@ const dmSans = DM_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Codex Atelier — Art Education Navigator",
+  title: "Codex Atelier — A Structured Path for Classical Art",
   description:
-    "Structured learning paths for drawing, painting, and visual arts. Every tutorial and course organized into the curriculum that actually works.",
+    "Drawing, painting, and visual storytelling organized into structured learning paths based on atelier traditions and modern teaching.",
 };
 
 export default function RootLayout({

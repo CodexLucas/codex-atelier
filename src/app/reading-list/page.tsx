@@ -3,7 +3,7 @@ import ReadingListGrid from "@/components/ReadingListGrid";
 
 export const metadata = {
   title: "Reading List — Codex Atelier",
-  description: "Recommended art instruction books for every level and discipline.",
+  description: "Essential art instruction books spanning 600 years. The references behind the curriculum.",
 };
 
 export default async function ReadingListPage() {
@@ -19,9 +19,9 @@ export default async function ReadingListPage() {
           Reading list
         </h1>
         <p className="text-text-secondary max-w-2xl">
-          The best art instruction books we know. If you want to go deeper on
-          any concept in our curriculum, these are the references worth owning.
-          Organized by tradition and approach.
+          The books behind the curriculum. For deeper study of any concept,
+          these are the references worth owning — organized by tradition
+          and approach.
         </p>
       </div>
 

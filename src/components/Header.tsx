@@ -41,7 +41,7 @@ export default function Header() {
             className="rounded-md bg-accent px-5 py-2 text-sm text-bg-primary hover:bg-accent-hover transition-colors"
             style={{ fontWeight: 500 }}
           >
-            Start learning
+            Begin study
           </Link>
         </nav>
 
@@ -77,7 +77,7 @@ export default function Header() {
             onClick={() => setMenuOpen(false)}
             className="block py-2 text-sm text-accent font-medium"
           >
-            Start learning
+            Begin study
           </Link>
         </nav>
       )}

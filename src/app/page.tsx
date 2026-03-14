@@ -70,43 +70,6 @@ export default async function HomePage() {
         </div>
       </section>
 
-      {/* ─── The Traditional Order ──────────────────────── */}
-      <section className="py-12 sm:py-16">
-        <div className="rounded-lg border border-border bg-bg-card p-8 sm:p-12">
-          <h2
-            className="text-2xl sm:text-3xl text-text-primary mb-6"
-            style={{ fontFamily: "var(--font-display)" }}
-          >
-            The traditional order of study
-          </h2>
-          <p className="text-text-secondary leading-relaxed mb-6 max-w-2xl">
-            For centuries, artists developed their skills through a disciplined
-            sequence of studies. Training typically began with observation and
-            the study of form. Each stage built upon the previous one.
-          </p>
-          <ol className="space-y-3">
-            {[
-              "Drawing from observation",
-              "Light and shadow",
-              "Anatomy",
-              "Perspective",
-              "Composition",
-              "Painting and visual storytelling",
-            ].map((stage, i) => (
-              <li key={stage} className="flex items-center gap-4 text-sm text-text-secondary">
-                <span className="flex-shrink-0 w-6 h-6 rounded-full bg-accent/10 text-accent text-xs flex items-center justify-center" style={{ fontWeight: 500 }}>
-                  {i + 1}
-                </span>
-                {stage}
-              </li>
-            ))}
-          </ol>
-          <p className="text-text-secondary leading-relaxed mt-6 max-w-2xl">
-            Codex reconstructs this structure using modern educational resources.
-          </p>
-        </div>
-      </section>
-
       {/* ─── Three Zones ──────────────────────────────── */}
       <section className="grid grid-cols-1 sm:grid-cols-3 gap-5 py-12">
         <div className="rounded-lg p-7 bg-zone-foundations">

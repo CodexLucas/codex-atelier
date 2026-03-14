@@ -84,7 +84,7 @@ export default async function HomePage() {
             sequence of studies. Training typically began with observation and
             the study of form. Each stage built upon the previous one.
           </p>
-          <ul className="grid grid-cols-2 sm:grid-cols-3 gap-3">
+          <ol className="space-y-3">
             {[
               "Drawing from observation",
               "Light and shadow",
@@ -92,13 +92,15 @@ export default async function HomePage() {
               "Perspective",
               "Composition",
               "Painting and visual storytelling",
-            ].map((stage) => (
-              <li key={stage} className="flex items-start gap-2 text-sm text-text-secondary">
-                <span className="text-accent mt-0.5">&#8226;</span>
+            ].map((stage, i) => (
+              <li key={stage} className="flex items-center gap-4 text-sm text-text-secondary">
+                <span className="flex-shrink-0 w-6 h-6 rounded-full bg-accent/10 text-accent text-xs flex items-center justify-center" style={{ fontWeight: 500 }}>
+                  {i + 1}
+                </span>
                 {stage}
               </li>
             ))}
-          </ul>
+          </ol>
           <p className="text-text-secondary leading-relaxed mt-6 max-w-2xl">
             Codex reconstructs this structure using modern educational resources.
           </p>

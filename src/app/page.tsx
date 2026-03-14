@@ -202,7 +202,7 @@ export default async function HomePage() {
                 Follow the sequence
               </h3>
               <p className="text-sm text-text-secondary leading-relaxed">
-                Each track is a multi-year curriculum with modules and
+                Each track is a structured curriculum with modules and
                 prerequisites. The structure reflects the order in which
                 artists historically developed their craft.
               </p>

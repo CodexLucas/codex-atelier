@@ -20,8 +20,8 @@ export default async function TracksPage() {
         </h1>
         <p className="text-text-secondary max-w-2xl">
           All tracks begin with Drawing Foundations, then branch into
-          specialization. Four to five years of structured curriculum,
-          designed to be followed at any pace.
+          specialization. A structured curriculum designed to be followed
+          at any pace.
         </p>
       </div>
 

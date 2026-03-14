@@ -45,15 +45,6 @@ export default async function TrackDetailPage({
         >
           {track.name}
         </h1>
-        {track.estimated_years && (
-          <div className="inline-flex items-center gap-2 rounded-full bg-bg-card border border-border px-4 py-1.5 text-sm text-text-secondary mb-4">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-              <circle cx="12" cy="12" r="10" />
-              <path d="M12 6v6l4 2" />
-            </svg>
-            ~{track.estimated_years} years estimated
-          </div>
-        )}
         {track.description && (
           <p className="text-text-secondary leading-relaxed max-w-2xl">
             {track.description}
@@ -84,11 +75,6 @@ export default async function TrackDetailPage({
                 )}
                 {mod.description && (
                   <p className="text-sm text-text-secondary mt-1">{mod.description}</p>
-                )}
-                {mod.estimated_hours && (
-                  <span className="text-xs text-text-muted mt-2 inline-block">
-                    ~{mod.estimated_hours}h
-                  </span>
                 )}
               </div>
             </div>

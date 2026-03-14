@@ -1,12 +1,12 @@
 import { getCanonicalWorks, getTraditions } from "@/lib/data";
-import LibraryGrid from "@/components/LibraryGrid";
+import ReadingListGrid from "@/components/ReadingListGrid";
 
 export const metadata = {
-  title: "Canonical Library — Codex Atelier",
-  description: "66 essential art instruction books spanning 600 years.",
+  title: "Reading List — Codex Atelier",
+  description: "Recommended art instruction books for every level and discipline.",
 };
 
-export default async function LibraryPage() {
+export default async function ReadingListPage() {
   const [works, traditions] = await Promise.all([getCanonicalWorks(), getTraditions()]);
 
   return (
@@ -16,16 +16,16 @@ export default async function LibraryPage() {
           className="text-3xl sm:text-4xl text-text-primary mb-3"
           style={{ fontFamily: "var(--font-display)" }}
         >
-          Canonical Library
+          Reading list
         </h1>
         <p className="text-text-secondary max-w-2xl">
-          The books that define art education. 66 works spanning 600 years, from
-          Renaissance treatises to modern atelier manuals. These are the
-          authority layer behind every recommendation.
+          The best art instruction books we know. If you want to go deeper on
+          any concept in our curriculum, these are the references worth owning.
+          Organized by tradition and approach.
         </p>
       </div>
 
-      <LibraryGrid works={works} traditions={traditions} />
+      <ReadingListGrid works={works} traditions={traditions} />
     </div>
   );
 }

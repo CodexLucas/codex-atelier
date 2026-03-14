@@ -44,7 +44,7 @@ export async function getTrackBySlug(slug: string) {
   return data;
 }
 
-// ─── Canonical Works ──────────────────────────────────────
+// ─── Canonical Works (for reading list) ───────────────────
 export async function getCanonicalWorks() {
   const supabase = await createClient();
   const { data } = await supabase
@@ -75,18 +75,5 @@ export async function getPlatforms() {
     .from("platforms")
     .select("*")
     .order("name");
-  return data ?? [];
-}
-
-// ─── RAG Search ───────────────────────────────────────────
-export async function searchExtractions(queryEmbedding: number[], threshold = 0.3, count = 10) {
-  const supabase = await createClient();
-  const { data } = await supabase
-    .schema("atelier")
-    .rpc("match_extractions", {
-      query_embedding: queryEmbedding,
-      match_threshold: threshold,
-      match_count: count,
-    });
   return data ?? [];
 }

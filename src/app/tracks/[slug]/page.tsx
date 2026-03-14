@@ -30,16 +30,14 @@ export default async function TrackDetailPage({
 
   return (
     <div className="mx-auto max-w-4xl px-4 sm:px-6 py-12 sm:py-16">
-      {/* Breadcrumb */}
       <nav className="mb-8 text-sm text-text-muted">
-        <Link href="/tracks" className="hover:text-text-secondary transition-colors">
+        <Link href="/tracks" className="hover:text-accent transition-colors">
           Tracks
         </Link>
         <span className="mx-2">/</span>
         <span className="text-text-secondary">{track.name}</span>
       </nav>
 
-      {/* Header */}
       <div className="mb-12">
         <h1
           className="text-3xl sm:text-5xl text-text-primary mb-4"
@@ -63,7 +61,6 @@ export default async function TrackDetailPage({
         )}
       </div>
 
-      {/* Modules */}
       {modules.length > 0 ? (
         <div className="space-y-4">
           <h2
@@ -77,11 +74,11 @@ export default async function TrackDetailPage({
               key={mod.id}
               className="flex items-start gap-4 rounded-lg border border-border bg-bg-card p-5"
             >
-              <div className="flex-shrink-0 w-8 h-8 rounded-full bg-accent/10 text-accent text-sm font-semibold flex items-center justify-center">
+              <div className="flex-shrink-0 w-8 h-8 rounded-full bg-accent/10 text-accent text-sm flex items-center justify-center" style={{ fontWeight: 500 }}>
                 {i + 1}
               </div>
               <div>
-                <h3 className="text-text-primary font-medium">{mod.name}</h3>
+                <h3 className="text-text-primary" style={{ fontWeight: 500 }}>{mod.name}</h3>
                 {mod.part_name && (
                   <span className="text-xs text-text-muted">{mod.part_name}</span>
                 )}
@@ -99,28 +96,25 @@ export default async function TrackDetailPage({
         </div>
       ) : (
         <div className="rounded-lg border border-border bg-bg-card p-8 text-center">
-          <div className="text-4xl mb-4">🏗️</div>
           <h2
             className="text-xl text-text-primary mb-2"
             style={{ fontFamily: "var(--font-display)" }}
           >
-            Modules Coming Soon
+            Modules coming soon
           </h2>
           <p className="text-sm text-text-secondary max-w-md mx-auto">
-            We&apos;re building the detailed curriculum for this track from the NMA Course
-            Guide and our library of 66 canonical art books. Each module will
-            include concepts, prerequisites, and recommended resources.
+            We are building the detailed curriculum for this track. Each module
+            will include concepts, prerequisites, and recommended resources.
           </p>
         </div>
       )}
 
-      {/* Back link */}
       <div className="mt-12">
         <Link
           href="/tracks"
           className="text-sm text-text-muted hover:text-accent transition-colors"
         >
-          &larr; All Tracks
+          &larr; All tracks
         </Link>
       </div>
     </div>

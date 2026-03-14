@@ -3,7 +3,7 @@ import TrackCard from "@/components/TrackCard";
 
 export const metadata = {
   title: "Career Tracks — Codex Atelier",
-  description: "10 career paths from Drawing Foundations to specialization.",
+  description: "Ten career paths from Drawing Foundations to specialization.",
 };
 
 export default async function TracksPage() {
@@ -16,12 +16,12 @@ export default async function TracksPage() {
           className="text-3xl sm:text-4xl text-text-primary mb-3"
           style={{ fontFamily: "var(--font-display)" }}
         >
-          Career Tracks
+          Career tracks
         </h1>
         <p className="text-text-secondary max-w-2xl">
-          Every track starts with Drawing Foundations (~1.5 years), then branches
-          into your chosen specialization. Built from the NMA Course Guide and
-          66 canonical art books.
+          Every track starts with Drawing Foundations, then branches into your
+          chosen specialization. Four to five years of structured curriculum,
+          built to work at your own pace.
         </p>
       </div>
 

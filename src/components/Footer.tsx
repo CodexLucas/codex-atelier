@@ -5,61 +5,68 @@ export default function Footer() {
     <footer className="border-t border-border bg-bg-secondary">
       <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6">
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-8">
-          {/* Brand */}
           <div>
             <h3
-              className="text-accent text-lg font-bold mb-2"
-              style={{ fontFamily: "var(--font-display)" }}
+              className="text-text-primary text-lg mb-2"
+              style={{ fontFamily: "var(--font-display)", fontWeight: 500 }}
             >
-              Codex Atelier
+              Codex<span className="text-accent">Atelier</span>
             </h3>
             <p className="text-sm text-text-muted leading-relaxed">
-              600 years of art instruction tradition, organized into career
-              paths you can actually follow.
+              Structured art education paths you can actually follow.
+              From gesture to finished work.
             </p>
           </div>
 
-          {/* Navigate */}
           <div>
-            <h4 className="text-xs font-semibold uppercase tracking-wider text-text-muted mb-3">
+            <h4 className="text-xs uppercase tracking-wider text-text-muted mb-3" style={{ fontWeight: 500 }}>
               Navigate
             </h4>
             <ul className="space-y-2 text-sm">
               <li>
-                <Link href="/tracks" className="text-text-secondary hover:text-text-primary transition-colors">
-                  Career Tracks
+                <Link href="/tracks" className="text-text-secondary hover:text-accent transition-colors">
+                  Career tracks
                 </Link>
               </li>
               <li>
-                <Link href="/library" className="text-text-secondary hover:text-text-primary transition-colors">
-                  Canonical Library
+                <Link href="/foundations" className="text-text-secondary hover:text-accent transition-colors">
+                  Foundations
                 </Link>
               </li>
               <li>
-                <Link href="/search" className="text-text-secondary hover:text-text-primary transition-colors">
-                  Ask the Books
+                <Link href="/reading-list" className="text-text-secondary hover:text-accent transition-colors">
+                  Reading list
                 </Link>
               </li>
             </ul>
           </div>
 
-          {/* Traditions */}
           <div>
-            <h4 className="text-xs font-semibold uppercase tracking-wider text-text-muted mb-3">
-              Traditions
+            <h4 className="text-xs uppercase tracking-wider text-text-muted mb-3" style={{ fontWeight: 500 }}>
+              Zones
             </h4>
             <ul className="space-y-2 text-sm">
-              <li className="text-trad-academic">Classical Academic</li>
-              <li className="text-trad-fine-art">Fine Art</li>
-              <li className="text-trad-concept">Concept Art</li>
-              <li className="text-trad-illustration">Illustration</li>
-              <li className="text-trad-digital">Digital / 3D</li>
+              <li>
+                <Link href="/foundations" className="text-text-secondary hover:text-accent transition-colors">
+                  Foundations
+                </Link>
+              </li>
+              <li>
+                <Link href="/industry" className="text-text-secondary hover:text-accent transition-colors">
+                  Industry
+                </Link>
+              </li>
+              <li>
+                <Link href="/expression" className="text-text-secondary hover:text-accent transition-colors">
+                  Expression
+                </Link>
+              </li>
             </ul>
           </div>
         </div>
 
         <div className="mt-10 border-t border-border pt-6 text-center text-xs text-text-muted">
-          Built by a chef who draws. &copy; {new Date().getFullYear()} Codex Atelier
+          &copy; {new Date().getFullYear()} Codex Atelier
         </div>
       </div>
     </footer>

@@ -1,40 +1,46 @@
 @import "tailwindcss";
 
-/* ─── Codex Atelier Theme ────────────────────────────────── */
+/* ─── Codex Atelier — Working Studio Theme ───────────────── */
 @theme inline {
-  /* Background & Surface */
-  --color-bg-primary: #0F0D0B;
-  --color-bg-secondary: #1A1714;
-  --color-bg-card: #231F1A;
-  --color-bg-hover: #2E2820;
+  /* Surface — toned paper, raw canvas, warm white */
+  --color-bg-primary: #F5F0E6;
+  --color-bg-secondary: #EDE6D6;
+  --color-bg-card: #FDFAF4;
+  --color-bg-hover: #F0E8D8;
 
-  /* Text */
-  --color-text-primary: #E8E0D4;
-  --color-text-secondary: #A89B8C;
-  --color-text-muted: #6B5F52;
+  /* Text — graphite range */
+  --color-text-primary: #2A2826;
+  --color-text-secondary: #5A5754;
+  --color-text-muted: #9E9A95;
 
-  /* Accent — warm gold (primary brand) */
-  --color-accent: #C9A84C;
-  --color-accent-dim: #8B7535;
+  /* Accent — sanguine (conté crayon) */
+  --color-accent: #A0432A;
+  --color-accent-hover: #8A3620;
+  --color-accent-light: #C96E52;
+  --color-accent-subtle: #E4B09F;
 
-  /* Traditions */
-  --color-trad-academic: #C9A84C;
-  --color-trad-fine-art: #7BA38C;
-  --color-trad-concept: #8B7FD4;
-  --color-trad-illustration: #D4764E;
-  --color-trad-digital: #5BA8C8;
+  /* Ultramarine — secondary accent for links, interactive */
+  --color-link: #1B3A6B;
+  --color-link-light: #2D5490;
 
-  /* Zones (intent) */
-  --color-zone-fundamentos: #C9A84C;
-  --color-zone-industria: #5BA8C8;
-  --color-zone-expresion: #B87BAD;
+  /* Zones (intent) — English */
+  --color-zone-foundations: #D4C5A9;
+  --color-zone-industry: #2A2826;
+  --color-zone-expression: #A0432A;
 
-  /* Borders */
-  --color-border: #2E2820;
-  --color-border-light: #3D3529;
+  /* Borders — warm, not cold gray */
+  --color-border: #D4C5A9;
+  --color-border-light: #E0D8C8;
+  --color-border-hover: #B8AC96;
+
+  /* Material tones */
+  --color-kraft: #C4B08B;
+  --color-raw-umber: #6B4E31;
+  --color-burnt-sienna: #8B4513;
+  --color-india-ink: #1A1917;
 
   /* Fonts */
-  --font-display: "DM Serif Display", Georgia, serif;
+  --font-display: "Cormorant Garamond", Georgia, serif;
   --font-body: "DM Sans", system-ui, sans-serif;
 }
 
@@ -45,14 +51,14 @@ body {
   font-family: var(--font-body);
 }
 
-/* Subtle grain texture */
+/* Paper grain texture */
 body::before {
   content: "";
   position: fixed;
   inset: 0;
   z-index: 9999;
   pointer-events: none;
-  opacity: 0.03;
+  opacity: 0.025;
   background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
 }
 
@@ -65,14 +71,13 @@ body::before {
   background: var(--color-bg-primary);
 }
 ::-webkit-scrollbar-thumb {
-  background: var(--color-border-light);
+  background: var(--color-border);
   border-radius: 4px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--color-text-muted);
+  background: var(--color-border-hover);
 }
 
-/* Hide scrollbar for horizontal scroll rows */
 .scrollbar-hide::-webkit-scrollbar {
   display: none;
 }
@@ -97,7 +102,6 @@ body::before {
   animation: fadeInUp 0.5s ease-out forwards;
 }
 
-/* Staggered children animation */
 .stagger-children > * {
   opacity: 0;
   animation: fadeInUp 0.4s ease-out forwards;

@@ -10,74 +10,87 @@ export default async function HomePage() {
   return (
     <div className="mx-auto max-w-7xl px-4 sm:px-6">
       {/* ─── Hero ─────────────────────────────────────── */}
-      <section className="py-20 sm:py-28 text-center">
-        <p className="text-sm uppercase tracking-[0.25em] text-accent mb-4">
-          Art Education Navigator
-        </p>
-        <h1
-          className="text-4xl sm:text-6xl lg:text-7xl text-text-primary leading-tight mb-6"
-          style={{ fontFamily: "var(--font-display)" }}
-        >
-          600 Years of Art Instruction.
-          <br />
-          <span className="text-accent">One Clear Path.</span>
-        </h1>
-        <p className="text-lg sm:text-xl text-text-secondary max-w-2xl mx-auto mb-10 leading-relaxed">
-          Classic art books define what to learn and in what order. We organize
-          the internet&apos;s best tutorials and courses around that authority.
-        </p>
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <Link
-            href="/tracks"
-            className="inline-flex items-center justify-center rounded-lg bg-accent px-6 py-3 text-sm font-semibold text-bg-primary hover:bg-accent/90 transition-colors"
+      <section className="py-20 sm:py-28">
+        <div className="max-w-2xl">
+          <p className="text-sm uppercase tracking-[0.2em] text-accent mb-5" style={{ fontWeight: 500 }}>
+            Art education, structured
+          </p>
+          <h1
+            className="text-4xl sm:text-5xl lg:text-6xl text-text-primary leading-[1.1] mb-6"
+            style={{ fontFamily: "var(--font-display)" }}
           >
-            Browse Career Tracks
-          </Link>
-          <Link
-            href="/search"
-            className="inline-flex items-center justify-center rounded-lg border border-border px-6 py-3 text-sm text-text-secondary hover:text-text-primary hover:border-accent/40 transition-all"
-          >
-            Ask the Books
-          </Link>
+            Learn to draw the way{" "}
+            <em className="text-accent">it was always meant to be taught</em>
+          </h1>
+          <p className="text-lg text-text-secondary max-w-xl mb-10 leading-relaxed">
+            Structured learning paths from gesture to finished work. Every
+            YouTube tutorial, every online course — organized into the
+            curriculum that actually works, so you always know what to study
+            next.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4">
+            <Link
+              href="/tracks"
+              className="inline-flex items-center justify-center rounded-lg bg-accent px-7 py-3.5 text-sm text-bg-primary hover:bg-accent-hover transition-colors"
+              style={{ fontWeight: 500 }}
+            >
+              Explore the paths
+            </Link>
+            <Link
+              href="#how-it-works"
+              className="inline-flex items-center justify-center rounded-lg border border-border px-7 py-3.5 text-sm text-text-secondary hover:text-text-primary hover:border-border-hover transition-all"
+            >
+              How it works
+            </Link>
+          </div>
         </div>
       </section>
 
       {/* ─── Three Zones ──────────────────────────────── */}
-      <section className="grid grid-cols-1 sm:grid-cols-3 gap-6 py-12">
-        <div className="rounded-lg border border-border bg-bg-card p-6 text-center">
-          <div className="h-1 w-8 rounded-full bg-zone-fundamentos mx-auto mb-4" />
-          <h3 className="text-lg text-text-primary mb-2" style={{ fontFamily: "var(--font-display)" }}>
-            Fundamentos
+      <section className="grid grid-cols-1 sm:grid-cols-3 gap-5 py-12">
+        <div className="rounded-lg p-7 bg-zone-foundations">
+          <h3
+            className="text-lg text-text-primary mb-2"
+            style={{ fontFamily: "var(--font-display)", fontWeight: 500 }}
+          >
+            Foundations
           </h3>
-          <p className="text-sm text-text-secondary">
-            Structured learning paths. &ldquo;I want to learn to draw properly.&rdquo;
+          <p className="text-sm text-text-secondary leading-relaxed">
+            Structured paths from absolute beginner to confident draftsman.
+            Proportion, gesture, form, light — in the right order.
           </p>
         </div>
-        <div className="rounded-lg border border-border bg-bg-card p-6 text-center">
-          <div className="h-1 w-8 rounded-full bg-zone-industria mx-auto mb-4" />
-          <h3 className="text-lg text-text-primary mb-2" style={{ fontFamily: "var(--font-display)" }}>
-            Industria
+        <div className="rounded-lg p-7 bg-zone-industry text-bg-primary">
+          <h3
+            className="text-lg mb-2"
+            style={{ fontFamily: "var(--font-display)", fontWeight: 500, color: "#C8C4BF" }}
+          >
+            Industry
           </h3>
-          <p className="text-sm text-text-secondary">
-            Career prep and portfolio. &ldquo;I want to work in concept art.&rdquo;
+          <p className="text-sm leading-relaxed" style={{ color: "#9E9A95" }}>
+            Portfolio preparation, career paths, studio standards. What the
+            industry actually looks for and how to get there.
           </p>
         </div>
-        <div className="rounded-lg border border-border bg-bg-card p-6 text-center">
-          <div className="h-1 w-8 rounded-full bg-zone-expresion mx-auto mb-4" />
-          <h3 className="text-lg text-text-primary mb-2" style={{ fontFamily: "var(--font-display)" }}>
-            Expresión
+        <div className="rounded-lg p-7 bg-accent text-bg-primary">
+          <h3
+            className="text-lg mb-2"
+            style={{ fontFamily: "var(--font-display)", fontWeight: 500, color: "#F5F0E6" }}
+          >
+            Expression
           </h3>
-          <p className="text-sm text-text-secondary">
-            Personal voice and philosophy. &ldquo;I want to find my style.&rdquo;
+          <p className="text-sm leading-relaxed" style={{ color: "#E4B09F" }}>
+            Finding your voice. Art philosophy, creative development, personal
+            projects. The part no curriculum teaches.
           </p>
         </div>
       </section>
 
       {/* ─── Career Tracks ────────────────────────────── */}
       <ZoneSection
-        title="Career Tracks"
-        subtitle="10 paths from Drawing Foundations to specialization. Each built from the canonical curriculum."
-        color="bg-accent"
+        title="Career tracks"
+        subtitle="Ten paths from Drawing Foundations to specialization. Every track starts with learning to see."
+        accentColor="bg-accent"
       >
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 stagger-children">
           {tracks.map((track) => (
@@ -89,8 +102,8 @@ export default async function HomePage() {
       {/* ─── Disciplines ──────────────────────────────── */}
       <ZoneSection
         title="Disciplines"
-        subtitle="The building blocks of art education. Every concept belongs to a discipline."
-        color="bg-trad-fine-art"
+        subtitle="The building blocks. Every concept and resource belongs to a discipline."
+        accentColor="bg-link"
       >
         <div className="flex flex-wrap gap-3">
           {disciplines.map((d) => (
@@ -99,31 +112,53 @@ export default async function HomePage() {
         </div>
       </ZoneSection>
 
-      {/* ─── The Two Layers ───────────────────────────── */}
-      <section className="py-16 sm:py-20">
+      {/* ─── How It Works ─────────────────────────────── */}
+      <section id="how-it-works" className="py-16 sm:py-20">
         <div className="rounded-lg border border-border bg-bg-card p-8 sm:p-12">
           <h2
-            className="text-2xl sm:text-3xl text-text-primary mb-6"
+            className="text-2xl sm:text-3xl text-text-primary mb-8"
             style={{ fontFamily: "var(--font-display)" }}
           >
-            How It Works
+            How it works
           </h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-8">
             <div>
-              <h3 className="text-accent font-semibold mb-2">The Authority Layer</h3>
+              <div className="w-8 h-8 rounded-full bg-accent/10 text-accent text-sm flex items-center justify-center mb-3" style={{ fontWeight: 500 }}>
+                1
+              </div>
+              <h3 className="text-text-primary mb-2" style={{ fontWeight: 500 }}>
+                Choose your intent
+              </h3>
               <p className="text-sm text-text-secondary leading-relaxed">
-                66 canonical art books — Loomis, Bridgman, Bargue, Aristides,
-                Hampton, Gurney — define what concepts exist, what order to learn
-                them, and which tradition they belong to. This is the brain.
+                Are you building fundamentals, preparing for an industry career,
+                or developing a personal voice? Each zone organizes content
+                around what you are actually trying to do.
               </p>
             </div>
             <div>
-              <h3 className="text-trad-digital font-semibold mb-2">The Content Layer</h3>
+              <div className="w-8 h-8 rounded-full bg-accent/10 text-accent text-sm flex items-center justify-center mb-3" style={{ fontWeight: 500 }}>
+                2
+              </div>
+              <h3 className="text-text-primary mb-2" style={{ fontWeight: 500 }}>
+                Follow a structured path
+              </h3>
               <p className="text-sm text-text-secondary leading-relaxed">
-                YouTube tutorials, Domestika courses, Proko, NMA, Schoolism —
-                ranked and contextualized using the book knowledge. The system
-                knows what a video teaches, what you need first, and where it
-                fits in your career path.
+                Every track is a multi-year curriculum with modules, prerequisites,
+                and checkpoints. You always know what to study next and why it
+                comes in that order.
+              </p>
+            </div>
+            <div>
+              <div className="w-8 h-8 rounded-full bg-accent/10 text-accent text-sm flex items-center justify-center mb-3" style={{ fontWeight: 500 }}>
+                3
+              </div>
+              <h3 className="text-text-primary mb-2" style={{ fontWeight: 500 }}>
+                Study from the best sources
+              </h3>
+              <p className="text-sm text-text-secondary leading-relaxed">
+                For each concept, we curate the best available resources — free
+                YouTube tutorials, paid courses, and reference books — ranked by
+                quality and mapped to your level.
               </p>
             </div>
           </div>
@@ -131,21 +166,23 @@ export default async function HomePage() {
       </section>
 
       {/* ─── CTA ──────────────────────────────────────── */}
-      <section className="py-16 text-center">
+      <section className="py-16 sm:py-20 text-center">
         <h2
           className="text-2xl sm:text-3xl text-text-primary mb-4"
           style={{ fontFamily: "var(--font-display)" }}
         >
-          7,141 pages of art knowledge, searchable.
+          Every path starts with drawing.
         </h2>
-        <p className="text-text-secondary mb-8">
-          Ask any question. Get answers grounded in the masters.
+        <p className="text-text-secondary mb-8 max-w-lg mx-auto">
+          Start with Drawing Foundations — the core module every track shares —
+          and branch into your specialization from there.
         </p>
         <Link
-          href="/search"
-          className="inline-flex items-center justify-center rounded-lg bg-accent px-6 py-3 text-sm font-semibold text-bg-primary hover:bg-accent/90 transition-colors"
+          href="/tracks"
+          className="inline-flex items-center justify-center rounded-lg bg-accent px-7 py-3.5 text-sm text-bg-primary hover:bg-accent-hover transition-colors"
+          style={{ fontWeight: 500 }}
         >
-          Try Ask the Books
+          Browse career tracks
         </Link>
       </section>
     </div>

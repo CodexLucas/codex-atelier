@@ -1,36 +1,70 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Codex Atelier
 
-## Getting Started
+Art education navigator platform. Structured learning paths for drawing, painting, and visual arts.
 
-First, run the development server:
+## Stack
+
+- **Next.js 16** + React 19
+- **Supabase** (schema: `atelier`, project: `vbrkqszvnozrbyhcqptx`)
+- **Tailwind CSS 4**
+- **Cormorant Garamond** (display) + **DM Sans** (body)
+
+## Visual Language
+
+Working studio aesthetic — warm toned paper, sanguine (conté crayon) accents, linen surfaces. Not dark mode fintech. Not sterile EdTech white.
+
+### Palette
+
+| Role | Color | Hex |
+|------|-------|-----|
+| Background | Canvas | `#F5F0E6` |
+| Surface | Linen | `#EDE6D6` |
+| Card | Warm white | `#FDFAF4` |
+| Text primary | Graphite 900 | `#2A2826` |
+| Text secondary | Graphite 600 | `#5A5754` |
+| Text muted | Graphite 300 | `#9E9A95` |
+| Accent | Sanguine | `#A0432A` |
+| Secondary accent | Ultramarine | `#1B3A6B` |
+| Border | Toned tan | `#D4C5A9` |
+
+### Three Zones
+
+- **Foundations** — toned paper warmth, the student's workspace
+- **Industry** — graphite/charcoal dark, professional, portfolio-ready
+- **Expression** — sanguine heat, creative risk, personal voice
+
+## Content Strategy
+
+Atelier is its own editorial authority. The 66 canonical art books are used internally for concept mapping and AI personalization but are never exposed as the source of content.
+
+- Books appear only in the **Reading List** as curated recommendations for further study
+- All user-facing concept explanations are original prose, never raw extractions
+- No "grounded in 66 books" claims — Atelier *is* the curriculum
+
+## Routes
+
+| Route | Description |
+|-------|-------------|
+| `/` | Landing page |
+| `/tracks` | Career tracks listing (10 tracks) |
+| `/tracks/[slug]` | Track detail with modules |
+| `/reading-list` | Curated book recommendations |
+| `/foundations` | Foundations zone (TBD) |
+| `/industry` | Industry zone (TBD) |
+| `/expression` | Expression zone (TBD) |
+
+## Development
 
 ```bash
+npm install
+cp .env.example .env.local  # Add Supabase credentials
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## What's Next
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- NMA curriculum constellation (interactive concept graph)
+- Zone pages (Foundations, Industry, Expression)
+- Module detail pages with curated resources
+- AI-powered path recommendation (paid tier)
+- EN/ES localization

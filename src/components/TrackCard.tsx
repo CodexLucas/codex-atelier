@@ -22,6 +22,11 @@ export default function TrackCard({ track }: { track: Track }) {
       >
         {track.name}
       </h3>
+      {track.estimated_years && (
+        <span className="text-xs text-text-muted">
+          ~{track.estimated_years} years
+        </span>
+      )}
       {track.description && (
         <p className="mt-2 text-sm text-text-secondary leading-relaxed line-clamp-2">
           {track.description}

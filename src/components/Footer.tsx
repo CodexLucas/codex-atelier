@@ -13,7 +13,8 @@ export default function Footer() {
               Codex<span className="text-accent">Atelier</span>
             </h3>
             <p className="text-sm text-text-muted leading-relaxed">
-              A structured path for learning classical art in the digital age.
+              Structured art education paths you can actually follow.
+              From gesture to finished work.
             </p>
           </div>
 

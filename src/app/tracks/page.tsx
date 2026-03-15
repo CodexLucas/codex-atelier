@@ -3,7 +3,7 @@ import TrackCard from "@/components/TrackCard";
 
 export const metadata = {
   title: "Career Tracks — Codex Atelier",
-  description: "Ten structured paths from Drawing Foundations to specialization. Study progresses through the traditional order.",
+  description: "Ten career paths from Drawing Foundations to specialization.",
 };
 
 export default async function TracksPage() {
@@ -19,9 +19,9 @@ export default async function TracksPage() {
           Career tracks
         </h1>
         <p className="text-text-secondary max-w-2xl">
-          All tracks begin with Drawing Foundations, then branch into
-          specialization. A structured curriculum designed to be followed
-          at any pace.
+          Every track starts with Drawing Foundations, then branches into your
+          chosen specialization. Four to five years of structured curriculum,
+          built to work at your own pace.
         </p>
       </div>
 

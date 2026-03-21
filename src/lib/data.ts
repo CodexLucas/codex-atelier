@@ -112,7 +112,7 @@ export async function getTopResourcesForConcepts(conceptIds: string[]) {
     .schema("atelier")
     .from("resource_concepts")
     .select(
-      "concept_id, coverage, resources(id, title, youtube_id, channel_name, view_count)"
+      "concept_id, coverage, resources(id, title, youtube_id, channel_name, teacher, view_count)"
     )
     .in("concept_id", conceptIds)
     .in("coverage", ["definitive", "deep_dive", "covers"])

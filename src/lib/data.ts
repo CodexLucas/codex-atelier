@@ -77,3 +77,60 @@ export async function getPlatforms() {
     .order("name");
   return data ?? [];
 }
+
+// ─── Concepts (for modules) ──────────────────────────────
+export async function getConceptsForModules(moduleIds: string[]) {
+  if (!moduleIds.length) return [];
+  const supabase = await createClient();
+  const { data } = await supabase
+    .schema("atelier")
+    .from("module_concepts")
+    .select("module_id, concepts(id, name, slug, description, skill_level)")
+    .in("module_id", moduleIds);
+  return data ?? [];
+}
+
+// ─── Concept Edges ───────────────────────────────────────
+export async function getConceptEdges(conceptIds: string[]) {
+  if (!conceptIds.length) return [];
+  const supabase = await createClient();
+  const { data } = await supabase
+    .schema("atelier")
+    .from("concept_edges")
+    .select(
+      "from_concept_id, to_concept_id, relation_type, notes"
+    )
+    .in("from_concept_id", conceptIds);
+  return data ?? [];
+}
+
+// ─── Top Resources for Concepts ──────────────────────────
+export async function getTopResourcesForConcepts(conceptIds: string[]) {
+  if (!conceptIds.length) return [];
+  const supabase = await createClient();
+  const { data } = await supabase
+    .schema("atelier")
+    .from("resource_concepts")
+    .select(
+      "concept_id, coverage, resources(id, title, youtube_id, channel_name, view_count)"
+    )
+    .in("concept_id", conceptIds)
+    .in("coverage", ["definitive", "deep_dive", "covers"])
+    .order("coverage")
+    .limit(5000);
+  return data ?? [];
+}
+
+// ─── Editorial (taglines, overviews) ─────────────────────
+export async function getEditorialForModules(moduleIds: string[]) {
+  if (!moduleIds.length) return [];
+  const supabase = await createClient();
+  const { data } = await supabase
+    .schema("atelier")
+    .from("editorial")
+    .select("target_id, note_type, content")
+    .eq("target_type", "module")
+    .in("target_id", moduleIds)
+    .in("note_type", ["tagline", "overview"]);
+  return data ?? [];
+}

@@ -116,7 +116,7 @@ export async function getTopResourcesForConcepts(conceptIds: string[]) {
     )
     .in("concept_id", conceptIds)
     .in("coverage", ["definitive", "deep_dive", "covers"])
-    .order("coverage")
+    .order("coverage", { ascending: false })
     .limit(5000);
   return data ?? [];
 }
